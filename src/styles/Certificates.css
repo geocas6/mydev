@@ -270,13 +270,16 @@
 }
 
 .tag {
-  font-size: 0.68rem;
+  font-size: 0.65rem;
   font-weight: 500;
+  font-family: 'Courier New', monospace;
   color: var(--text-secondary);
-  background: rgba(139, 148, 158, 0.1);
-  border: 1px solid rgba(139, 148, 158, 0.2);
-  padding: 2px 8px;
+  background: rgba(139, 148, 158, 0.08);
+  border: 1px solid rgba(139, 148, 158, 0.18);
+  padding: 3px 8px;
   border-radius: 4px;
+  word-break: break-all;
+  line-height: 1.5;
 }
 
 .cert-card__cta {

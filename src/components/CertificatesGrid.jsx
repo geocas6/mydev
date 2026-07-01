@@ -18,22 +18,22 @@ const CERTIFICATES_DATA = [
   {
     id: 1,
     active: true,
-    platform: 'Coderhouse',
-    title: 'Título del Certificado 1',            // ← Rellena esto
-    description: 'Descripción breve del curso y los conocimientos adquiridos.', // ← Rellena esto
-    tags: ['Tag1', 'Tag2', 'Tag3'],               // ← Rellena esto
-    imageUrl: 'https://coder-ui-static-content.coderhouse.com/certificates/8f646d71-648a-4ba1-8366-ca572b634c8f.png',
+    platform: 'Coderhouse · PedidosYa',
+    title: 'Desarrollo Web / Web Development',
+    description: 'Aprendé a construir sitios web desde cero dominando HTML semántico, CSS moderno y los fundamentos de JavaScript.',
+    tags: ['ID de la credencial: 8f646d71-648a-4ba1-8366-ca572b634c8f'],
+    imageUrl: '/images/cert1.png',
     certUrl: 'https://pub.coderhouse.com/certificates/8f646d71-648a-4ba1-8366-ca572b634c8f?v=1',
   },
   {
     id: 2,
     active: true,
     platform: 'Coderhouse',
-    title: 'Título del Certificado 2',            // ← Rellena esto
-    description: 'Descripción breve del curso y los conocimientos adquiridos.', // ← Rellena esto
-    tags: ['Tag1', 'Tag2'],                       // ← Rellena esto
-    imageUrl: 'https://coder-ui-static-content.coderhouse.com/certificates/8f646d71-648a-4ba1-8366-ca572b634c8f.png', // ← Reemplaza con la imagen del cert 2 cuando la tengas
-    certUrl: 'https://coderhouse-production-student-certificates.s3.us-east-1.amazonaws.com/certificates/students/5dfacbf3-b626-4224-b889-47741d573cb4/group/products/1b2dff06-72d9-458b-b83e-e160d51fe380/b9fad966-44fb-4151-9330-31241633f61b.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIA57BPRSYQDCTIIJYK%2F20260630%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260630T225953Z&X-Amz-Expires=86400&X-Amz-Security-Token=IQoJb3JpZ2luX2VjEAQaCXVzLWVhc3QtMSJGMEQCIEZ%2BnralokLt6GWA693zo7OWi1i4snrP1EYvafTmGr%2FPAiAJdf1Jx%2FJecxZwxVimKSIamZfUKMflBwise9w22TnLKiqUBAjM%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDk2MDAyNDkwOTM0NCIMDPOEnTQAwtUCeUIIKugDhEtz5wn6n8%2BVp5%2BY3d8ZqFYySDv5nSCtrhitseiLRt6jrKjI0%2BM8khNEK8gQ3hy713TreCRgcqP0kqq58wFEkZwNxn4vR73713b81GbD1yY6eU1soaDrewqKE%2BS6KJlC5isM80LxwVgBGlc6lBh2ar9BuzTgwSqpWAsvKxTbeo%2FNxo%2Bgp%2F2wxAamqygBIlwzWRgLWxY0H9gneRRfswk7DIKEjZolP9xmp0RG2ESgPpghUWfq5N%2FQBWNav1TWHDJmDwifk%2B976oOwQB%2BjMU6G9Zr%2Fu6EyUhvszCiHXqB1rHpZEu5NhYjPWcUPHbQj%2FnLnJN2HD2vV64mW9kW0ltYLTngdDRW%2FPTC6gLSITV2DKas86IvZm75SeGXUbs7GcXeU6RVVqYY0IJlIFCfuMUMBceNQdqnXoubmCWSHPYlnXDS1%2FuCwstLe2%2F8c9Tl0pHSf%2BR9eIis2U4PomKbDZxJOzcv42HGMVrKzhc5Qy99YKKQonRjC97il%2BFf2YpLaywP3C7lFQR%2FvgR54pvtx3hRJkM%2FcRyqIA32LCS3%2BY2vU5I59iTK%2B0kPZ2jJVNzRVqFCUqKWQV7l0abJivwUBNfWN17QoWKMXutBnZVt5LOzN2xQ3WQMx3KLdRTX3hVaSUqYX5%2BGrw0SLoLMwgaqQ0gY6pgGvM8GT8QxkWwKjEObBNKTHWoMhOLWfDNiwpjManEBsAThqmIO3ZfM7o702B0WL0EwRkkzg5FUeRRDeJboI%2BcPb5%2BQ8etMSiuN96D1yU0f7V%2FoAx%2BUmUNyLSp%2B5VzuTo0ODMV1U7UI2U2XKnL3ip4DQGI%2FSa4sBuNVu40NOeYYgD2vtJHW7Op3X0peA2qwkKJG6NFss0jAPjE8q49oP7FAYXiy6w9pn&X-Amz-Signature=c507ab26a082a37ceea34d4ff2a20399413bbd404776055b449615c11cef6c67&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject',
+    title: 'JavaScript Flex',
+    description: 'Dominá JavaScript desde sus bases hasta conceptos avanzados como funciones, arrays, objetos y manipulación del DOM.',
+    tags: ['ID de la credencial: CERT-MQV97F2E-F71649FB'],
+    imageUrl: '/images/cert2.png',
+    certUrl: 'https://app.coderhouse.com/certificates/CERT-MQV97F2E-F71649FB',
   },
   // Los 6 slots restantes se generan automáticamente como "bloqueados"
   { id: 3, active: false },
