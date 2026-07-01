@@ -6,5 +6,5 @@ import react from '@vitejs/plugin-react'
 // Cámbiala a: '/nombre-de-tu-repo/'
 export default defineConfig({
   plugins: [react()],
-  base: '/mydevcertificates/',
+  base: '/mydev/',
 })
