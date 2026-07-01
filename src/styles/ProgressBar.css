@@ -1,0 +1,186 @@
+/* ============================================================
+   ProgressBar.css — Fixed bottom progress bar styles
+   ============================================================ */
+
+.progress-bar-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(8, 12, 18, 0.88);
+  backdrop-filter: blur(20px) saturate(1.5);
+  -webkit-backdrop-filter: blur(20px) saturate(1.5);
+  border-top: 1px solid var(--border-subtle);
+  padding: var(--space-md) var(--space-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Left: label */
+.progress-bar__label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 130px;
+  flex-shrink: 0;
+}
+
+.progress-bar__title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.progress-bar__goal {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.progress-bar__goal::before {
+  content: '🎯';
+  font-size: 0.9rem;
+}
+
+/* Center: track */
+.progress-bar__track-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.progress-bar__track {
+  width: 100%;
+  height: 8px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.04);
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #1f6feb 0%, #58a6ff 60%, #79c0ff 100%);
+  box-shadow: 0 0 12px rgba(88, 166, 255, 0.5);
+  transform-origin: left center;
+  /* Animación de entrada */
+  animation: progressFill 1.4s 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+  transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shine sweep */
+.progress-bar__fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.25) 40%,
+    rgba(255,255,255,0.4) 50%,
+    rgba(255,255,255,0.25) 60%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shineSweep 3s 1.8s ease-in-out infinite;
+}
+
+/* Micro dots */
+.progress-bar__milestones {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1px;
+}
+
+.milestone {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  position: relative;
+}
+
+.milestone--reached {
+  background: var(--accent-primary);
+  box-shadow: 0 0 5px var(--accent-primary);
+}
+
+/* Right: percentage */
+.progress-bar__percentage {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+  gap: 1px;
+}
+
+.progress-bar__number {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+  /* Count-up handled by animation */
+  animation: fadeIn 0.5s 1s ease both;
+}
+
+.progress-bar__fraction {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ── Keyframes ──────────────────────────────────────────────── */
+@keyframes progressFill {
+  from { width: 0% !important; }
+}
+
+@keyframes shineSweep {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Mobile tweaks ──────────────────────────────────────────── */
+@media (max-width: 500px) {
+  .progress-bar-container {
+    padding: var(--space-sm) var(--space-md);
+    gap: var(--space-md);
+  }
+
+  .progress-bar__label {
+    min-width: 90px;
+  }
+
+  .progress-bar__title {
+    font-size: 0.62rem;
+  }
+
+  .progress-bar__goal {
+    font-size: 0.75rem;
+  }
+
+  .progress-bar__number {
+    font-size: 1.1rem;
+  }
+}
