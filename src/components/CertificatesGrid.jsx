@@ -18,7 +18,7 @@ const CERTIFICATES_DATA = [
   {
     id: 1,
     active: true,
-    platform: 'Coderhouse · PedidosYa',
+    platform: 'Coderhouse',
     title: 'Desarrollo Web / Web Development',
     description: 'Aprendé a construir sitios web desde cero dominando HTML semántico, CSS moderno y los fundamentos de JavaScript.',
     tags: ['ID de la credencial: 8f646d71-648a-4ba1-8366-ca572b634c8f'],
@@ -58,7 +58,11 @@ function ActiveCard({ cert, index }) {
       {/* Thumbnail */}
       <div className="cert-card__thumbnail">
         {cert.imageUrl ? (
-          <img src={cert.imageUrl} alt={`Certificado ${cert.title}`} loading="lazy" />
+          <img
+            src={`${import.meta.env.BASE_URL}${cert.imageUrl.replace(/^\//, '')}`}
+            alt={`Certificado ${cert.title}`}
+            loading="lazy"
+          />
         ) : (
           <div className="cert-card__thumbnail-placeholder" aria-hidden="true">
             🎓
